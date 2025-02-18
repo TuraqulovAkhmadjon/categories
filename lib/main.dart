@@ -1,5 +1,6 @@
 import 'package:categories/categories/data/models/categories_view_model.dart';
 import 'package:categories/categories/data/repositories/categories_repository.dart';
+import 'package:categories/categories/presentation/widgets/categories_view.dart';
 import 'package:categories/categories_page_app_bar.dart';
 import 'package:categories/core/client.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CategoriesPage(
+      home: CategoriesView(
         vm: CategoriesViewModel(
             categoriesRepo: CategoriesRepository(client: ApiClient())),
       ),
@@ -22,19 +23,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class CategoriesPage extends StatelessWidget {
-  const CategoriesPage({super.key, required this.vm});
-
-  final CategoriesViewModel vm;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: vm,
-      builder: (BuildContext context, child) => Scaffold(
-        backgroundColor: Color(0xff1E1E1E),
-        appBar: CategoriesPageAppBar(),
-      ),
-    );
-  }
-}

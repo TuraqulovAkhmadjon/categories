@@ -1,7 +1,6 @@
-
-
+import 'package:categories/categories/presentation/widgets/categories_bottom_nav_bar.dart';
 import 'package:categories/categories/presentation/widgets/main_categoreis_item.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:categories/categories_page_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/models/categories_view_model.dart';
@@ -18,7 +17,10 @@ class CategoriesView extends StatelessWidget {
       listenable: vm,
       builder: (context, _) {
         return Scaffold(
-           extendBody: true,
+          bottomNavigationBar: categories_bottom_nav_bar(),
+          backgroundColor: Color(0xFF1E1E1E),
+          appBar: CategoriesPageAppBar(),
+          extendBody: true,
           body: CategoriesBody(viewModel: vm),
         );
       },
