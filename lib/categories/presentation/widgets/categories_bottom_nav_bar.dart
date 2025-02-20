@@ -15,7 +15,7 @@ class categories_bottom_nav_bar extends StatelessWidget {
           width: 280,
           height: 56,
           decoration: BoxDecoration(
-            color: Color(0xffFD5D69),
+            color: Theme.of(context).colorScheme.primary,
             borderRadius: BorderRadius.circular(33),
           ),
           child: Row(

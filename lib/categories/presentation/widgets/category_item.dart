@@ -26,7 +26,7 @@ class CategoriesItem extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.onPrimary,
             fontSize: 15,
             fontWeight: FontWeight.w500,
           ),

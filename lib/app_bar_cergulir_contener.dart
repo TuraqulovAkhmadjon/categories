@@ -6,6 +6,7 @@ class AppBarCergulirContener extends StatelessWidget {
     super.key,
     required this.image,
   });
+
   final image;
 
   @override
@@ -14,8 +15,11 @@ class AppBarCergulirContener extends StatelessWidget {
         width: 28,
         height: 28,
         decoration: BoxDecoration(
-            color: Color(0xffFFC6C9), borderRadius: BorderRadius.circular(14)),
-        child: SvgPicture.asset(image, fit: BoxFit.none,)
-    );
+          color: Theme.of(context).colorScheme.secondary,
+            borderRadius: BorderRadius.circular(14)),
+        child: SvgPicture.asset(
+          image,
+          fit: BoxFit.none,
+        ));
   }
 }

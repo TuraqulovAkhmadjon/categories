@@ -9,7 +9,6 @@ class CategoriesPageAppBar extends StatelessWidget implements PreferredSizeWidge
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        backgroundColor: const Color(0xff1E1E1E),
       leading: IconButton(
         onPressed: () {
           GoRouter.of(context).pop();
@@ -25,7 +24,6 @@ class CategoriesPageAppBar extends StatelessWidget implements PreferredSizeWidge
         child: Text(
           "Categories",
           style: TextStyle(
-            color: Color(0xffFD5D69),
             fontSize: 22,
             fontWeight: FontWeight.w700,
           ),

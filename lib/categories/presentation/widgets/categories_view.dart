@@ -18,7 +18,6 @@ class CategoriesView extends StatelessWidget {
       builder: (context, _) {
         return Scaffold(
           bottomNavigationBar: categories_bottom_nav_bar(),
-          backgroundColor: Color(0xFF1E1E1E),
           appBar: CategoriesPageAppBar(),
           extendBody: true,
           body: CategoriesBody(viewModel: vm),
